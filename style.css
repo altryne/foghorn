@@ -471,6 +471,7 @@ body {
 }
 .entry-content {
 	padding: .7em 0 0;
+	clear:both;
 }
 .entry-summary {
 	padding: 0.35em 0 0;
@@ -1495,4 +1496,10 @@ overflow: hidden;
 padding: 0 !important;
 position: relative;
 top: -5px;
+}
+footer.entry-meta .rtsocial-container{
+	float:none;
+	top:0;
+	padding:6px 0 !important;
+	width:180px;
 }
