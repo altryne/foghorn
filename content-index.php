@@ -37,7 +37,8 @@
 		</header><!-- .entry-header -->
 
 		<div class="entry-summary">
-			<?php the_excerpt( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'foghorn' ) ); ?>
+			<?php /* the_excerpt( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'foghorn' ) ); */?>
+			<?php the_content() ?>
 		</div><!-- .entry-summary -->
 
 		<footer class="entry-meta">
