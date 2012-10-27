@@ -1481,3 +1481,11 @@ a.comment-reply-link {
 		position: relative !important;
 	}
 }
+
+/* PLUGINS */
+.rtsocial-container {
+overflow: hidden;
+padding: 0 !important;
+position: relative;
+top: -5px;
+}
