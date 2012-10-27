@@ -25,7 +25,5 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-<script src="http://use.edgefonts.net/source-sans-pro.js"></script>
-<script src="http://use.edgefonts.net/m-1c.js"></script>
 </body>
 </html>
