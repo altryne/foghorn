@@ -20,6 +20,7 @@
 				esc_html( get_the_date() )
 			);
 			?>
+			<?php if ( function_exists( 'rtsocial' ) ) { echo rtsocial(); } ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 	<div class="entry-content">
