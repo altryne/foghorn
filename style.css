@@ -474,6 +474,7 @@ body {
 }
 .entry-summary {
 	padding: 0.35em 0 0;
+	clear:both;
 }
 footer.entry-meta .entry-utility-prep-cat-links {
 	display:inline-block;
@@ -1310,6 +1311,9 @@ a.comment-reply-link {
 	.single .entry-header .entry-meta {
 		display:none;
 	}
+	.single .entry-header .rtsocial-container{
+		display:none;
+	}
 	.single footer.entry-meta {
 		float:left;
 		width:16%;
@@ -1379,6 +1383,9 @@ a.comment-reply-link {
 		float:none;
 	}
 	.single footer.entry-meta {
+		display:none;
+	}
+	.single footer.rtsocial-container{
 		display:none;
 	}
 }
