@@ -81,7 +81,14 @@ if ( !function_exists( 'optionsframework_page_notice' ) ) {
  
 function foghorn_body_class($classes) {
 	$layout = of_get_option('layout','layout-2cr');
+
 	$classes[] = $layout;
+	if(is_single()){
+		$classes[] = 'is_single';
+	};
+	if(is_home()){
+		$classes[] = 'homepage';
+	};
 	return $classes;
 }
 
