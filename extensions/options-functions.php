@@ -82,7 +82,7 @@ if ( !function_exists( 'optionsframework_page_notice' ) ) {
 function foghorn_body_class($classes) {
 	$layout = of_get_option('layout','layout-2cr');
 	/* Force 1c layout for single posts and pages  - alex */
-	if(is_single()){
+	if(is_single() || is_page()){
 		$layout = 'layout-1c';
 	};
 	$classes[] = $layout;

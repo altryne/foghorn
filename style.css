@@ -266,7 +266,7 @@ body {
 }
 .page .hentry, .error404 .hentry {
 	float:left;
-	width:86%;
+	width:100%;
 }
 .sticky {
 }
