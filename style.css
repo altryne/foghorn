@@ -445,6 +445,7 @@ body {
 	color:#555;
 	font-size:12px;
 	text-transform:uppercase;
+	float:left;
 }
 .entry-header .entry-meta {
 	margin-bottom:0.7em;
