@@ -1421,6 +1421,14 @@ a.comment-reply-link {
 	object {
 		max-width: 100%;
 	}
+	#page {
+		margin: 0 auto;
+		padding:0 !important;
+		max-width: 1110px;
+    }
+    #branding{
+     	padding-left:15px;   
+    }
 }
 @media (max-width: 660px) {
 	/* Talking avatars take up too much room at this size */
