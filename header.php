@@ -56,8 +56,6 @@
 	 */
 	wp_head();
 ?>
-<script src="http://use.edgefonts.net/source-sans-pro.js"></script>
-<script src="http://use.edgefonts.net/open-sans.js"></script>
 </head>
 
 <body <?php body_class(); ?>>
