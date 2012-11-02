@@ -1,4 +1,4 @@
-$(document).ready(function (){
+jQuery(document).ready(function ($){
 	$('#inner').on('mouseenter mouseleave', function(e){
 		$face = $('#face_inner');
 		$mouth = $('#mouth');
