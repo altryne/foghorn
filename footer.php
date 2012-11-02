@@ -24,7 +24,6 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 <?php wp_footer(); ?>
-<script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.7.1.min.js" type="text/javascript"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/prefixfree.min.js" type="text/javascript"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/face.js" type="text/javascript"></script>
 </body>
