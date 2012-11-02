@@ -1604,7 +1604,7 @@ footer.entry-meta .rtsocial-container{
 #inner:hover #mouth {
   animation: eat 200ms ease-in-out; }
 
-@keyfr ames eat {
+@keyframes eat {
   0% {
     transform: rotateZ(0deg); }
 
