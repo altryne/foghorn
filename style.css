@@ -14,28 +14,28 @@ Tags: gray, two-columns, one-column, right-sidebar, left-sidebar, flexible-width
 /* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
 -------------------------------------------------------------- */
 
-@font-face {
-    font-family: 'open-sans';
-    src: url('fonts/OpenSans-Regular-webfont.eot');
-    src: url('fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/OpenSans-Regular-webfont.woff') format('woff'),
-         url('fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
-         url('fonts/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+/*@font-face {*/
+    /*font-family: 'open-sans';*/
+    /*src: url('fonts/OpenSans-Regular-webfont.eot');*/
+    /*src: url('fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),*/
+         /*url('fonts/OpenSans-Regular-webfont.woff') format('woff'),*/
+         /*url('fonts/OpenSans-Regular-webfont.ttf') format('truetype'),*/
+         /*url('fonts/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');*/
+    /*font-weight: normal;*/
+    /*font-style: normal;*/
+/*}*/
 
-@font-face {
-    font-family: 'source-sans-pro';
-    src: url('fonts/SourceSansPro-Regular-webfont.eot');
-    src: url('fonts/SourceSansPro-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/SourceSansPro-Regular-webfont.woff') format('woff'),
-         url('fonts/SourceSansPro-Regular-webfont.ttf') format('truetype'),
-         url('fonts/SourceSansPro-Regular-webfont.svg#SourceSansProRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+/*@font-face {*/
+    /*font-family: 'source-sans-pro';*/
+    /*src: url('fonts/SourceSansPro-Regular-webfont.eot');*/
+    /*src: url('fonts/SourceSansPro-Regular-webfont.eot?#iefix') format('embedded-opentype'),*/
+         /*url('fonts/SourceSansPro-Regular-webfont.woff') format('woff'),*/
+         /*url('fonts/SourceSansPro-Regular-webfont.ttf') format('truetype'),*/
+         /*url('fonts/SourceSansPro-Regular-webfont.svg#SourceSansProRegular') format('svg');*/
+    /*font-weight: normal;*/
+    /*font-style: normal;*/
 
-}
+/*}*/
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -1534,3 +1534,116 @@ footer.entry-meta .rtsocial-container{
 	padding:6px 0 !important;
 	width:180px;
 }
+
+
+/* ===== Easter egg eating styles ========================================================
+   Author: Alex Volkov
+   ========================================================================== */
+
+#container {
+  width: 250px;
+  height: 250px;
+  padding: 0px;
+  background: #bbb;
+  position: relative;
+  cursor: default;
+  transform-origin: 0 0;
+}
+
+#inner:hover {
+  cursor: none; }
+
+#inner {
+  width: 100%;
+  height: 100%;
+  background: url(images/backdrop.jpg) no-repeat;
+  position: relative; }
+
+#shadow {
+  width: 100%;
+  height: 100%;
+  background: url(images/shadow.png) no-repeat;
+  z-index: 15;
+  position: relative; }
+
+#face_cont {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 0; }
+
+#face_cont.flip {
+  transform: scale(-1); }
+
+#face_inner {
+  position: absolute;
+  top: 0;
+  left: -16px;
+  transition: all 100ms ease-in; }
+
+#inner:hover #face_inner {
+  transform: rotateZ(-4deg); }
+
+#face {
+  position: relative;
+  left: -39px; }
+
+#mouth {
+  position: absolute;
+  left: 123px;
+  top: 101px;
+  transform-origin: 0 0;
+  transition: all 200ms ease-in-out; }
+
+.shake #face_inner {
+  animation: shake 200ms infinite; }
+
+#inner:hover #mouth {
+  animation: eat 200ms ease-in-out; }
+
+@keyfr ames eat {
+  0% {
+    transform: rotateZ(0deg); }
+
+  50% {
+    transform: rotateZ(25deg); }
+
+  100% {
+    transform: rotateZ(0deg); } }
+
+@keyframes shake {
+  0% {
+    transform: translate(2px, 1px) rotate(0deg); }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg); }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg); }
+
+  30% {
+    transform: translate(0px, 2px) rotate(0deg); }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg); }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg); }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg); }
+
+  70% {
+    transform: translate(2px, 1px) rotate(-1deg); }
+
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg); }
+
+  90% {
+    transform: translate(2px, 2px) rotate(0deg); }
+
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg); } }
