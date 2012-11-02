@@ -18,6 +18,15 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
+
+<!-- Open Graph Start -->
+
+<meta property="og:image" content="http://alexw.me/wp-content/uploads/2012/11/altryne_500.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="500" />
+<meta property="og:image:height" content="500" />
+
+
 <title><?php
 	/*
 	 * Print the <title> tag based on what is being viewed.
