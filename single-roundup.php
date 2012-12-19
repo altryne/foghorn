@@ -17,7 +17,6 @@ get_header(); ?>
                 
                 	<div class="content-wrap clearfix">
 						<?php get_template_part( 'content', 'single' ); ?>
-						lalallal alalslalsfalsla ll la
                     </div>
 
 					<?php foghorn_content_nav( 'nav-below' ); ?>

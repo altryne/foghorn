@@ -23,7 +23,7 @@
 		</div><!-- .entry-meta -->
 		<?php if ( function_exists( 'rtsocial' ) ) { echo rtsocial(); } ?>
 	</header><!-- .entry-header -->
-	<div class="entry-content" data-post="<?php echo  get_post_type_name(the_ID()); ?>">
+	<div class="entry-content" data-post="<?php echo  get_post_type_name(); ?>">
 		<?php the_content(); ?>
         <?php edit_post_link( __( 'Edit', 'foghorn' ), '<span class="edit-link">', '</span>' ); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( '<span>Pages:</span>', 'foghorn' ), 'after' => '</div>' ) ); ?>
