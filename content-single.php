@@ -28,9 +28,16 @@
         <?php if(get_post_type_name() == 'roundup'){
             $links = get_group('link') ;
               foreach ($links as $link){
-                print_r($link);
+//                print_r($link);
+                  $url = $link['link_url'][1];
+                  $title = $link['link_title'][1];
+                  $image = $link['link_image'][1]['original'];
+                  $image_thumb = $link['link_image'][1]['thumb'];
+                  $description = $link['link_description'][1];
                   echo '<div class="awesome_link">';
-                    echo $link['link_url'][1];
+                    echo '<a class="link_title" href="' . $url .'">' . $title .'</a>';
+                    echo '<a class="link_image" href="' . $url .'"><img src="' . $image .'" alt="" /></a>';
+                    echo '<div class="link_description">'.$description.'</div>';
                   echo '</div>';
               }
           }
