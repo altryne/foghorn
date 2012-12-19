@@ -23,8 +23,15 @@
 		</div><!-- .entry-meta -->
 		<?php if ( function_exists( 'rtsocial' ) ) { echo rtsocial(); } ?>
 	</header><!-- .entry-header -->
-	<div class="entry-content" data-post="<?php echo  get_post_type_name(); ?>">
+	<div class="entry-content">
 		<?php the_content(); ?>
+        <?php if(get_post_type_name() == 'roundup'){
+            $links = get_group('link') ;
+              foreach ($links as $link){
+                print_r($link);
+              }
+          }
+        ?>
         <?php edit_post_link( __( 'Edit', 'foghorn' ), '<span class="edit-link">', '</span>' ); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( '<span>Pages:</span>', 'foghorn' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
