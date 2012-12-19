@@ -29,6 +29,9 @@
             $links = get_group('link') ;
               foreach ($links as $link){
                 print_r($link);
+                  echo '<div class="awesome_link">';
+                    echo $link->link_url;
+                  echo '</div>';
               }
           }
         ?>
