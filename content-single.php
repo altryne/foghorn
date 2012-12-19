@@ -30,7 +30,7 @@
               foreach ($links as $link){
                 print_r($link);
                   echo '<div class="awesome_link">';
-                    echo $link['link_url'][0];
+                    echo $link['link_url'][1];
                   echo '</div>';
               }
           }
