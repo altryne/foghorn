@@ -11,7 +11,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
-        <h3>Written by <a href="https://plus.google.com/+AlexWolkov"><?php get_the_author() ?></a></h3>
+        <h3>Written by <a href="https://plus.google.com/+AlexWolkov">Alex Wolkov</h3>
         <div class="entry-meta">
 			<?php
 				printf( __( '<span class="sep">Posted </span><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a>', 'foghorn' ),
