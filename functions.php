@@ -89,26 +89,8 @@ function foghorn_continue_reading_link() {
  * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and foghorn_continue_reading_link().
  *
  */
- 
-function foghorn_auto_excerpt_more( $more ) {
-	return ' &hellip;' . foghorn_continue_reading_link();
-}
-add_filter( 'excerpt_more', 'foghorn_auto_excerpt_more' );
 
-/**
- * Adds a pretty "Continue Reading" link to custom post excerpts.
- *
- * To override this link in a child theme, remove the filter and add your own
- * function tied to the get_the_excerpt filter hook.
- */
- 
-function foghorn_custom_excerpt_more( $output ) {
-	if ( has_excerpt() && ! is_attachment() ) {
-		$output .= foghorn_continue_reading_link();
-	}
-	return $output;
-}
-add_filter( 'get_the_excerpt', 'foghorn_custom_excerpt_more' );
+
 
 /**
  * Adds custom body for singular vs multiple layouts
@@ -223,3 +205,16 @@ function foghorn_comment( $comment, $args, $depth ) {
 	endswitch;
 }
 endif; // ends check for foghorn_comment()
+
+// Replaces the excerpt "more" text by a link
+function new_excerpt_more($more) {
+       global $post;
+	return '';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+
+function excerpt_read_more_link($output) {
+    global $post;
+    return $output . '<a class="moretag"  href="'. get_permalink($post->ID) . '"> Read the full article...</a>';
+}
+add_filter('the_excerpt', 'excerpt_read_more_link');

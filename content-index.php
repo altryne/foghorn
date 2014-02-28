@@ -11,17 +11,7 @@
 	<div class="content-wrap">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     
-    	<?php if( has_post_thumbnail() ) { ?>
-    	<div class="post-thumbnail">
-    		<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php _e('Permanent Link to', 'foghorn'); ?> <?php the_title_attribute(); ?>"><?php the_post_thumbnail('multiple-thumb'); ?></a>
-            <?php if ( is_sticky() ) { ?>
-				<span class="entry-format"><?php _e( 'Featured', 'foghorn' ); ?></span>
-			<?php } ?>
-        </div>
-        <?php } ?>
-        
-        
-        <div<?php if( has_post_thumbnail() ) { ?> class="post-wrap"<?php } ?>>
+    	<div<?php if( has_post_thumbnail() ) { ?> class=""<?php } ?>>
 		<header class="entry-header">
         	<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'foghorn' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 			<div class="entry-meta">
@@ -34,12 +24,20 @@
                 );
                 ?>
             </div><!-- .entry-meta -->
-            <?php if ( function_exists( 'rtsocial' ) ) { echo rtsocial(); } ?>
+
 		</header><!-- .entry-header -->
 
 		<div class="entry-summary">
-			<?php /* the_excerpt( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'foghorn' ) ); */?>
-			<?php the_content() ?>
+            <?php if( has_post_thumbnail() ) { ?>
+            <div class="post-thumbnail">
+                <a href="<?php the_permalink(); ?>" rel="bookmark"
+                   title="<?php _e('Permanent Link to', 'foghorn'); ?> <?php the_title_attribute(); ?>"><?php the_post_thumbnail('multiple-thumb'); ?></a>
+                <?php if ( is_sticky() ) { ?>
+                <span class="entry-format"><?php _e( 'Featured', 'foghorn' ); ?></span>
+                <?php } ?>
+            </div>
+            <?php } ?>
+			<?php the_excerpt( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'foghorn' ) ,FALSE); ?>
 		</div><!-- .entry-summary -->
 
 		<footer class="entry-meta">
@@ -61,6 +59,7 @@
 			<?php endif; // End if comments_open() ?>
 			<?php edit_post_link( __( 'Edit', 'foghorn' ), '<span class="sep"> | </span><span class="edit-link">', '</span>' ); ?>
 		</footer><!-- #entry-meta -->
+        <?php if ( function_exists( 'rtsocial' ) ) { echo rtsocial(); } ?>
         </div>
 	</article><!-- #post-<?php the_ID(); ?> -->
     </div>
