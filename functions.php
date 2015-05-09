@@ -114,6 +114,16 @@ function foghorn_widgets_init() {
 		'before_title' => '<h1 class="widget-title">',
 		'after_title' => '</h1>',
 	) );
+
+    register_sidebar( array(
+		'name' => __( 'After Post Widget', 'foghorn' ),
+		'id' => 'after-post',
+		'description' => __( 'After every post.', 'foghorn' ),
+		'before_widget' => '<div id="%1$s" class="widget post-bottom %2$s">',
+		'after_widget' => "</div>",
+		'before_title' => '<h1 class="widget-title">',
+		'after_title' => '</h1>',
+	) );
 }
 add_action( 'widgets_init', 'foghorn_widgets_init' );
 
